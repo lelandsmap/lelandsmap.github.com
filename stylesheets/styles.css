@@ -8,21 +8,30 @@ body {
     padding: 0;
 }
 
-#map_canvas {
+#wrapper {
     height: 100%;
+}
+
+#map_wrapper {
+    margin-right: 300px;
+    height: 100%;
+}
+
+#map_canvas {
     width: 100%;
-    float: left;
+    height: 100%;
 }
 
 #sidebar {
-    float: right;
     width: 300px; 
+    position: absolute;
+    top: 0px;
+    right: 0px;
     height: 100%;
-    background-color: black; 
+    background-color: #333; 
 }
 
 #title {
-    position: absolute;
     margin-left: auto;
     margin-right: auto;
 
