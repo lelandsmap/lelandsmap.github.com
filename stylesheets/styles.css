@@ -10,6 +10,7 @@ body {
 
 #map_canvas {
     height: 100%;
+    float: left;
 }
 
 #sidebar {
@@ -19,7 +20,7 @@ body {
     right: 0; 
     top: 0; 
     padding: 0; 
-    width: 30%; 
+    width: 200px; 
     height: 100%;
     background-color: black; 
     border: 0px; 
