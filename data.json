@@ -1,0 +1,13 @@
+{
+  "version": "1.0",
+  "locations": [
+    {"id": "1",
+     "name": "Columbae",
+     "lat": "37.42310",
+     "long": "-122.16880",
+     "category": "CreateNewDoc()"
+     },
+    {"value": "Open", "onclick": "OpenDoc()"},
+    {"value": "Close", "onclick": "CloseDoc()"}
+  ]
+}
