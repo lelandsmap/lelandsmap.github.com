@@ -29,6 +29,17 @@ $(function() {
         map.panTo(lastValidCenter);
     });
 
+//alert("page loaded.\n");
+    $.getJSON('data/data.json', function(data) {
+        //alert("loaded json file.\n");
+  //alert('locations:'+data.locations);
+    $.each(data.locations, function(i, location){
+        //alert('index:' + i + 'category:' + location.category + '\n');
+    });
+
+
+}); 
+
     // Start of marker code
     var myLatlng = new google.maps.LatLng(37.42310,-122.16880);
     var contentString = '<div id="content">'+

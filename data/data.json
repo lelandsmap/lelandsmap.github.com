@@ -7,7 +7,17 @@
      "long": "-122.16880",
      "category": "CreateNewDoc()"
      },
-    {"value": "Open", "onclick": "OpenDoc()"},
-    {"value": "Close", "onclick": "CloseDoc()"}
+    {"id": "2",
+     "name": "Another",
+     "lat": "37.42910",
+     "long": "-122.16880",
+     "category": "CreateNewDoc()"
+     },
+     {"id": "3",
+     "name": "Post office",
+     "lat": "37.42210",
+     "long": "-122.16880",
+     "category": "CreateNewDoc()"
+     }
   ]
 }
