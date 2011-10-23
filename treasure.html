@@ -15,7 +15,7 @@
     var latlng = new google.maps.LatLng(37.427, -122.172);
     var myOptions = {
       zoom: 15,
-      minZoom: 1, //12
+      minZoom: 12, //12
       maxZoom: 18,
       center: latlng,
       mapTypeId: google.maps.MapTypeId.ROADMAP
@@ -25,8 +25,8 @@
 
     // bounds of the desired area
 var allowedBounds = new google.maps.LatLngBounds(
-     new google.maps.LatLng(28.70, -127.50), 
-     new google.maps.LatLng(48.85, -55.90)
+     new google.maps.LatLng(37.4014, -122.1854), // 37: the lower, the lower on the screen
+     new google.maps.LatLng(37.4435, -122.1600) //122: the lower the negative value, the more
 );
 var lastValidCenter = map.getCenter();
 
