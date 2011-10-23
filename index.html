@@ -8,71 +8,11 @@
   #map_canvas { height: 100% }
 </style>
 <script type="text/javascript" src="javascripts/jquery-1.6.4.js"></script>
-<script type="text/javascript" src="javascripts/custom.js"></script>
-<script type="text/javascript"
-    src="http://maps.googleapis.com/maps/api/js?sensor=false">
-</script>
-<script type="text/javascript">
-  function initialize() {
-    var latlng = new google.maps.LatLng(37.427, -122.172);
-    var myOptions = {
-      zoom: 15,
-      minZoom: 14,
-      maxZoom: 18,
-      center: latlng,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
-    var map = new google.maps.Map(document.getElementById("map_canvas"),
-        myOptions);
-
-    // bounds of the desired area
-var allowedBounds = new google.maps.LatLngBounds(
-     new google.maps.LatLng(37.4014, -122.1854), // 37: the lower, the lower on the screen
-     new google.maps.LatLng(37.4435, -122.1600) //122: the lower the negative value, the more
-);
-var lastValidCenter = map.getCenter();
-
-google.maps.event.addListener(map, 'center_changed', function() {
-    if (allowedBounds.contains(map.getCenter())){ 
-        // still within valid bounds, so save the last valid position
-        lastValidCenter = map.getCenter();
-        return; 
-    }
-
-    // not valid anymore => return to last valid position
-    map.panTo(lastValidCenter);
-});
-
-    // Start of marker code
-    var myLatlng = new google.maps.LatLng(37.42310,-122.16880);
-    var contentString = '<div id="content">'+
-        '<div id="siteNotice">'+
-        '</div>'+
-        '<h1 id="firstHeading" class="firstHeading">Columbae</h1>'+
-        '<div id="bodyContent">'+
-        '<p><b>Columbae</b>, home of the naked people, is also home to Kapil and Alex'+
-        '</div>'+
-        '</div>';
-        
-    var infowindow = new google.maps.InfoWindow({
-        content: contentString,
-        maxWidth: 200
-    });
-
-    var marker = new google.maps.Marker({
-        position: myLatlng,
-        map: map,
-        title: 'Columbae'
-    });
-    google.maps.event.addListener(marker, 'click', function() {
-      infowindow.open(map,marker);
-    });
-
-  }
-
+<script type="text/javascript" src="javascripts/main.js"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false">
 </script>
 </head>
-<body onload="initialize()">
+<body>
   <div id="map_canvas" style="width:100%; height:100%"></div>
 </body>
 </html>
