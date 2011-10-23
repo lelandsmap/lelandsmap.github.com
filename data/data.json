@@ -3,20 +3,23 @@
   "locations": [
     {"id": "1",
      "name": "Columbae",
-     "lat": "37.42310",
-     "long": "-122.16880",
+     "lat": 37.42310,
+     "long": -122.16880,
+     "description": "some text here",
      "category": "CreateNewDoc()"
      },
     {"id": "2",
-     "name": "Another",
-     "lat": "37.42910",
-     "long": "-122.16880",
+     "name": "Oval",
+     "lat": 37.42910,
+     "long": -122.16880,
+     "description": "some text2 here",
      "category": "CreateNewDoc()"
      },
      {"id": "3",
-     "name": "Post office",
-     "lat": "37.42210",
-     "long": "-122.16880",
+     "name": "French house",
+     "lat": 37.42210,
+     "long": -122.16880,
+     "description": "some text3 here",
      "category": "CreateNewDoc()"
      }
   ]

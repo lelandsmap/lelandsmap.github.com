@@ -1,5 +1,12 @@
 // Initialization stuff
 $(function() {
+
+    //
+    var infowindow = new google.maps.InfoWindow({
+        //content: contentString,
+        maxWidth: 200
+    });
+
     var latlng = new google.maps.LatLng(37.427, -122.172);
     var myOptions = {
         zoom: 15,
@@ -29,41 +36,41 @@ $(function() {
         map.panTo(lastValidCenter);
     });
 
-//alert("page loaded.\n");
+    //alert("page loaded.\n");
     $.getJSON('data/data.json', function(data) {
         //alert("loaded json file.\n");
-  //alert('locations:'+data.locations);
-    $.each(data.locations, function(i, location){
-        //alert('index:' + i + 'category:' + location.category + '\n');
-    });
+        //alert('locations:'+data.locations);
+        $.each(data.locations, function(i, location){
+            //alert('index:' + i + 'description:' + location.description + '\n');
+            
+            //var myLatlng = new google.maps.LatLng(37.42310,-122.16880);
+            var myLatlng = new google.maps.LatLng(location.lat,location.long);
+            var contentString = '<div id="content">'+
+                '<div id="siteNotice">'+
+                '</div>'+
+                '<h1 id="firstHeading" class="firstHeading">'+ location.name+'</h1>'+
+                '<div id="bodyContent">'+
+                location.description +
+                '</div>'+
+                '</div>';
 
+            
 
-}); 
+            var marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map,
+                title: 'Columbae'
+            });
+            google.maps.event.addListener(marker, 'click', function() {
+                infowindow.setContent(contentString);
+                infowindow.open(map,marker);
+            });
+            
+        });
+    }); 
 
     // Start of marker code
-    var myLatlng = new google.maps.LatLng(37.42310,-122.16880);
-    var contentString = '<div id="content">'+
-        '<div id="siteNotice">'+
-        '</div>'+
-        '<h1 id="firstHeading" class="firstHeading">Columbae</h1>'+
-        '<div id="bodyContent">'+
-        '<p><b>Columbae</b>, home of the naked people, is also home to Kapil and Alex'+
-        '</div>'+
-        '</div>';
-
-    var infowindow = new google.maps.InfoWindow({
-        content: contentString,
-        maxWidth: 200
-    });
-
-    var marker = new google.maps.Marker({
-        position: myLatlng,
-        map: map,
-        title: 'Columbae'
-    });
-    google.maps.event.addListener(marker, 'click', function() {
-        infowindow.open(map,marker);
-    });
+    
 
 });
 
