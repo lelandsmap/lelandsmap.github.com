@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link href='http://fonts.googleapis.com/css?family=Petrona' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Mate' rel='stylesheet' type='text/css'>
+
         <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
         <link rel="stylesheet" type="text/css" href="stylesheets/styles.css" />
         <script type="text/javascript" src="javascripts/jquery-1.6.4.js"></script>
@@ -14,15 +17,15 @@
                 <div id="map_canvas">
                 </div>
             </div>
-            <div id="sidebar">
+            <div id="sidebar" style="background-image:url('images/side_gradient.png');">
                 <div id="sidebar-content">
-                    <h1>SteamTunnel</h1>
-                    <p>Welcome to SteamTunnel! A student's guide to all the crazy places at Stanford.</p>
+                    <h1>[ steamtunnel ]</h1>
                 </div>
                 <ul id="filters">
                     <li>
                     <label for="fountain">
-                        <input type="checkbox" id="fountain" checked />
+                    <img src="images/unchecked.png" class="checkbox"/>
+                        <!-- <input type="checkbox" id="fountain" checked /> -->
                         Fountain
                     </label>
                     </li>
@@ -45,6 +48,9 @@
                         </label>
                     </li>
                 </ul>
+                <div id="bottom">
+                    <a href="#">[ suggest a spot ]</a>
+                </div>
             </div>
         </div>
     </body>

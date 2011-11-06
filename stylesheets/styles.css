@@ -2,6 +2,9 @@ html {
     height: 100%;
 }
 
+a:link {color:#FFF; text-decoration:none;}
+a:visited {color:#FFF; text-decoration:none;}
+
 body {
     height: 100%;
     font-family: "Verdana", sans-serif;
@@ -25,20 +28,31 @@ body {
 }
 
 #sidebar {
+    font-family: 'Petrona', serif;
     width: 300px; 
     position: absolute;
     top: 0px;
     right: 0px;
     height: 100%;
-    background-color: #333; 
+    background-color: #333;
     color: #fff;
+
+    /*background-repeat:repeat-y left;*/
 }
 
 #sidebar-content {
     padding: 15px;
+    text-align:center;
+}
+
+img.checkbox {
+    width: 15px;  
+    height : auto; 
 }
 
 #filters {
+    font-family: 'Mate', serif;
+    font-size: 1.5em;
     padding: 0px;
 }
 
@@ -53,11 +67,11 @@ body {
 }
 
 #filters li label {
-    font-size: 1.2em;
+    
     width: 100%;
     display: inline-block;
     padding: 20px 10px;
-    background-color: #444;
+    /*background-color: #444;*/
     cursor: pointer;
 }
 
@@ -65,3 +79,10 @@ body {
     background-color: #555;
 }
 
+#bottom {
+    position:absolute;
+    right:0px;
+    bottom:0px;
+    padding:10px;
+    font-size: .75em;
+}
