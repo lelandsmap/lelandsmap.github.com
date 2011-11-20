@@ -18,7 +18,7 @@ body {
 }
 
 #map_wrapper {
-    /*margin-right: 300px;*/
+    margin-right: 300px;
     margin-left: 300px;
     height: 100%;
 }
@@ -40,6 +40,26 @@ body {
     color: #fff;
 
     /*background-repeat:repeat-y left;*/
+}
+
+#rightbar {
+    font-family: 'Petrona', serif;
+    width: 300px; 
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    /*left: 0px;*/
+    height: 100%;
+    background-color: white;
+    color: #000;
+    /*background-repeat:repeat-y left;*/
+}
+
+#comments_title {
+    font-family: 'Helvetica';
+    font-size: 1.5em;
+    padding: 2px;
+    margin: 20px;
 }
 
 #sidebar-content {

@@ -1,4 +1,11 @@
 // Initialization stuff
+
+function update_comments(location){
+    //alert('location:'+location.name+'category:'+location.category);
+    $("#comments_title").html(location.name);
+
+}
+
 $(function() {
 
     //
@@ -64,6 +71,8 @@ $(function() {
             google.maps.event.addListener(marker, 'click', function() {
                 infowindow.setContent(contentString);
                 infowindow.open(map,marker);
+                //alert("clicked on me:"+location.name);
+                update_comments(location);
             });
             
         });
