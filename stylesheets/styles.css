@@ -105,6 +105,18 @@ img.checkbox {
     background-color: #555;
 }
 
+#bottom_like_text {
+    position:absolute;
+    left:0px;
+    bottom:80px;
+}
+#bottom_like {
+    position:absolute;
+    left:0px;
+    bottom:0px;
+    padding:10px;
+}
+
 #bottom {
     position:absolute;
     right:0px;
