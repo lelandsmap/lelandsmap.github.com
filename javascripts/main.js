@@ -1,9 +1,9 @@
 // Initialization stuff
-
-function update_comments(location){
+var site_url = 'some_website_here.com';
+function update_rightbar(location){
     //alert('location:'+location.name+'category:'+location.category);
-    $("#comments_title").html(location.name);
-
+    $("#rightbar_title").html(location.name);
+    
 }
 
 $(function() {
@@ -72,7 +72,7 @@ $(function() {
                 infowindow.setContent(contentString);
                 infowindow.open(map,marker);
                 //alert("clicked on me:"+location.name);
-                update_comments(location);
+                update_rightbar(location);
             });
             
         });

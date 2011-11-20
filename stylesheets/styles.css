@@ -18,7 +18,7 @@ body {
 }
 
 #map_wrapper {
-    margin-right: 300px;
+    margin-right: 400px;
     margin-left: 300px;
     height: 100%;
 }
@@ -44,7 +44,7 @@ body {
 
 #rightbar {
     font-family: 'Petrona', serif;
-    width: 300px; 
+    width: 400px; 
     position: absolute;
     top: 0px;
     right: 0px;
@@ -55,11 +55,15 @@ body {
     /*background-repeat:repeat-y left;*/
 }
 
-#comments_title {
+#rightbar_title {
     font-family: 'Helvetica';
     font-size: 1.5em;
     padding: 2px;
     margin: 20px;
+}
+
+#rightbar_body{
+    margin: 10px;
 }
 
 #sidebar-content {
