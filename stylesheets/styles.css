@@ -29,6 +29,17 @@ body {
     height: 100%;
 }
 
+#pulldown {
+    width: 100%;
+    height: 200px;
+    position:absolute;
+    top:40px;
+    left:0px;
+    background-color: #261F00;
+    color: #fff;
+    z-index:0;
+}
+
 #topbar {
     font-family: 'Petrona', serif;
     width: 100%;
@@ -36,8 +47,9 @@ body {
     position: absolute;
     top: 0px;
     left: 0px;
-    background-color: #222;
+    background-color: #261F00;
     color: #fff;
+    z-index:2;
 }
 
 #topbar_text {
@@ -59,7 +71,14 @@ body {
     right:10px;
     top: 5px;
 }
-
+/*
+#topbar_arrows {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    bottom:0px;
+}
+*/
 #sidebar {
     font-family: 'Petrona', serif;
     width: 300px; 
@@ -86,6 +105,7 @@ body {
     background-color: white;
     color: #000;
     /*background-repeat:repeat-y left;*/
+    z-index:0;
 }
 
 #rightbar_title {

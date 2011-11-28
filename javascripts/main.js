@@ -78,6 +78,18 @@ $(function() {
         });
     }); 
 
+    $('#pulldown').hide();
+    $('#topbar').mouseover(function() {
+        if($('#pulldown').is(':hidden')) {
+            $('#pulldown').show("slide", { direction: "up" }, 500);
+        }
+    });
+    $('#pulldown').mouseout(function() {
+        if($('#pulldown').is(':visible')) {
+            $('#pulldown').hide("slide", { direction: "up" }, 500);
+        }
+    });
+
     // Start of marker code
     
 
